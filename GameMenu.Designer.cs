@@ -33,7 +33,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.PredictTheValueIndex = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // title
@@ -84,14 +84,15 @@
             this.button4.Text = "button4";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // PredictTheValueIndex
             // 
-            this.button5.Location = new System.Drawing.Point(88, 301);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(174, 23);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.PredictTheValueIndex.Location = new System.Drawing.Point(88, 301);
+            this.PredictTheValueIndex.Name = "PredictTheValueIndex";
+            this.PredictTheValueIndex.Size = new System.Drawing.Size(174, 23);
+            this.PredictTheValueIndex.TabIndex = 5;
+            this.PredictTheValueIndex.Text = "Predict the Value Index";
+            this.PredictTheValueIndex.UseVisualStyleBackColor = true;
+            this.PredictTheValueIndex.Click += new System.EventHandler(this.PredictTheValueIndex_Click);
             // 
             // GameMenu
             // 
@@ -99,7 +100,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(510, 450);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.PredictTheValueIndex);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -120,7 +121,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button PredictTheValueIndex;
     }
 }
 

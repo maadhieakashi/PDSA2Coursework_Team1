@@ -26,5 +26,12 @@ namespace PDSA2Coursework_Team1
               this.Hide();
             
         }
+
+        private void PredictTheValueIndex_Click(object sender, EventArgs e)
+        {
+            PredictValueIndex predictValueIndex = new PredictValueIndex();
+            predictValueIndex.Show();
+            this.Hide();
+        }
     }
 }
