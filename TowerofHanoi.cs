@@ -1,11 +1,11 @@
-﻿
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace PDSA2Coursework_Team1
-{    public partial class TowerofHanoi : Form
+{
+    public partial class TowerofHanoi : Form
     {
         private Stack<int> sourceRod;
         private Stack<int> auxiliaryRod;
@@ -59,7 +59,7 @@ namespace PDSA2Coursework_Team1
         private void ProcessMove(string move)
         {
             if (string.IsNullOrWhiteSpace(move) || move.Length != 7 || move[1] != ' ' || move[3] != ' ' ||
-                move[2] != 't' || move[4] != 't' || move[5] != 'o')
+                move[2] != 't' || move[4] != 'o' || move[5] != ' ')
             {
                 MessageBox.Show("Invalid move format. Use format A to C.");
                 return;
@@ -133,12 +133,5 @@ namespace PDSA2Coursework_Team1
                 e.Handled = true; // Prevents the beep sound on Enter key press
             }
         }
-              // private void TowerofHanoi_Load(object sender, EventArgs e)
-        // {
-
-        // }
-
-
-
     }
 }
