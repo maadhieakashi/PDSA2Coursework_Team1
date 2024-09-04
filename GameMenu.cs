@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,6 +24,7 @@ namespace PDSA2Coursework_Team1
               this.Hide();
             
         }
+
          private void button2_Click(object sender, EventArgs e)
         {
               SixteenQueen_Puzzle SixteenQueen_PuzzleForm = new SixteenQueen_Puzzle();
@@ -51,13 +52,8 @@ namespace PDSA2Coursework_Team1
               PredictValueIndexForm.Show();
               this.Hide();
             
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            SixteenQueen_Puzzle SixtnQnsForm = new SixteenQueen_Puzzle();
-            SixtnQnsForm.Show();
-            this.Hide();
+>>>>>>>>> Temporary merge branch 2
         }
     }
 }

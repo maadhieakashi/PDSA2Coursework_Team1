@@ -1,4 +1,4 @@
-﻿namespace PDSA2Coursework_Team1
+namespace PDSA2Coursework_Team1
 {
     partial class SixteenQueen_Puzzle
     {
@@ -570,9 +570,9 @@
             this.gamemenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gamemenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamemenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gamemenu.Location = new System.Drawing.Point(693, 19);
+            this.gamemenu.Location = new System.Drawing.Point(662, 19);
             this.gamemenu.Name = "gamemenu";
-            this.gamemenu.Size = new System.Drawing.Size(75, 23);
+            this.gamemenu.Size = new System.Drawing.Size(106, 23);
             this.gamemenu.TabIndex = 36;
             this.gamemenu.Text = "Game Menu";
             this.gamemenu.UseVisualStyleBackColor = false;
