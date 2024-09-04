@@ -136,6 +136,7 @@
             this.gamemenu.TabIndex = 37;
             this.gamemenu.Text = "Game Menu";
             this.gamemenu.UseVisualStyleBackColor = false;
+            this.gamemenu.Click += new System.EventHandler(this.gamemenu_Click);
             // 
             // TowerofHanoi
             // 

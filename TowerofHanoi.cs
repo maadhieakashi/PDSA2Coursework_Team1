@@ -133,5 +133,12 @@ namespace PDSA2Coursework_Team1
                 e.Handled = true; // Prevents the beep sound on Enter key press
             }
         }
+
+        private void gamemenu_Click(object sender, EventArgs e)
+        {
+            GameMenu GameMenuForm = new GameMenu();
+            GameMenuForm.Show();
+            this.Hide();
+        }
     }
 }

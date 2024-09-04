@@ -46,14 +46,16 @@ namespace PDSA2Coursework_Team1
               this.Hide();
             
         }
-               private void button5_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-              PredictValueIndex PredictValueIndexForm = new PredictValueIndex();
-              PredictValueIndexForm.Show();
-              this.Hide();
-            
+            PredictValueIndex PredictValueIndexForm = new PredictValueIndex();
+            PredictValueIndexForm.Show();
+            this.Hide();
+        }
+      
+        private void GameMenu_Load(object sender, EventArgs e)
+        {
 
->>>>>>>>> Temporary merge branch 2
         }
     }
 }

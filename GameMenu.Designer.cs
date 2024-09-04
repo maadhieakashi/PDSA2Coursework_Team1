@@ -109,6 +109,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GameMenu";
             this.Text = "Game Menu";
+            this.Load += new System.EventHandler(this.GameMenu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
