@@ -1,4 +1,4 @@
-﻿namespace PDSA2Coursework_Team1
+namespace PDSA2Coursework_Team1
 {
     partial class SixteenQueen_Puzzle
     {
