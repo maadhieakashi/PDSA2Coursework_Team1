@@ -30,7 +30,7 @@
         {
             this.title = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.SixteenQns = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
@@ -57,14 +57,15 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // SixteenQns
             // 
-            this.button2.Location = new System.Drawing.Point(88, 156);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Sixteen Queen Puzzle";
-            this.button2.UseVisualStyleBackColor = true;
+            this.SixteenQns.Location = new System.Drawing.Point(88, 156);
+            this.SixteenQns.Name = "SixteenQns";
+            this.SixteenQns.Size = new System.Drawing.Size(174, 23);
+            this.SixteenQns.TabIndex = 2;
+            this.SixteenQns.Text = "Sixteen Queen Puzzle";
+            this.SixteenQns.UseVisualStyleBackColor = true;
+            this.SixteenQns.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -102,7 +103,7 @@
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.SixteenQns);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -117,7 +118,7 @@
 
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button SixteenQns;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
