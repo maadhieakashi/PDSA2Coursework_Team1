@@ -64,6 +64,13 @@ namespace PDSA2Coursework_Team1
             this.s_time = new System.Windows.Forms.TextBox();
             this.lthreaded = new System.Windows.Forms.Label();
             this.lSequential = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // restartButton
@@ -73,17 +80,17 @@ namespace PDSA2Coursework_Team1
             this.restartButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.restartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.restartButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.restartButton.Location = new System.Drawing.Point(670, 47);
+            this.restartButton.Location = new System.Drawing.Point(577, 90);
             this.restartButton.Name = "restartButton";
-            this.restartButton.Size = new System.Drawing.Size(98, 23);
+            this.restartButton.Size = new System.Drawing.Size(119, 23);
             this.restartButton.TabIndex = 0;
-            this.restartButton.Text = "Restart Game";
+            this.restartButton.Text = "Reset";
             this.restartButton.UseVisualStyleBackColor = false;
             this.restartButton.Click += new System.EventHandler(this.restartButton_Click);
             // 
             // positionTextBox
             // 
-            this.positionTextBox.Location = new System.Drawing.Point(18, 73);
+            this.positionTextBox.Location = new System.Drawing.Point(9, 136);
             this.positionTextBox.MaximumSize = new System.Drawing.Size(550, 20);
             this.positionTextBox.MinimumSize = new System.Drawing.Size(400, 20);
             this.positionTextBox.Name = "positionTextBox";
@@ -98,9 +105,9 @@ namespace PDSA2Coursework_Team1
             this.submitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.submitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.submitButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.submitButton.Location = new System.Drawing.Point(693, 76);
+            this.submitButton.Location = new System.Drawing.Point(577, 134);
             this.submitButton.Name = "submitButton";
-            this.submitButton.Size = new System.Drawing.Size(75, 23);
+            this.submitButton.Size = new System.Drawing.Size(119, 23);
             this.submitButton.TabIndex = 2;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = false;
@@ -109,7 +116,7 @@ namespace PDSA2Coursework_Team1
             // chessboardPanel
             // 
             this.chessboardPanel.BackColor = System.Drawing.Color.Transparent;
-            this.chessboardPanel.Location = new System.Drawing.Point(57, 126);
+            this.chessboardPanel.Location = new System.Drawing.Point(51, 192);
             this.chessboardPanel.Name = "chessboardPanel";
             this.chessboardPanel.Size = new System.Drawing.Size(480, 480);
             this.chessboardPanel.TabIndex = 3;
@@ -122,7 +129,7 @@ namespace PDSA2Coursework_Team1
             this.Solution.BackColor = System.Drawing.Color.Transparent;
             this.Solution.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Solution.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Solution.Location = new System.Drawing.Point(15, 57);
+            this.Solution.Location = new System.Drawing.Point(6, 120);
             this.Solution.Name = "Solution";
             this.Solution.Size = new System.Drawing.Size(53, 13);
             this.Solution.TabIndex = 4;
@@ -133,7 +140,7 @@ namespace PDSA2Coursework_Team1
             this.col.BackColor = System.Drawing.Color.Transparent;
             this.col.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.col.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.col.Location = new System.Drawing.Point(57, 103);
+            this.col.Location = new System.Drawing.Point(51, 169);
             this.col.Margin = new System.Windows.Forms.Padding(0);
             this.col.Name = "col";
             this.col.Size = new System.Drawing.Size(30, 20);
@@ -146,7 +153,7 @@ namespace PDSA2Coursework_Team1
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(118, 103);
+            this.label1.Location = new System.Drawing.Point(112, 169);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(30, 20);
@@ -159,7 +166,7 @@ namespace PDSA2Coursework_Team1
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(88, 103);
+            this.label2.Location = new System.Drawing.Point(82, 169);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 20);
@@ -172,7 +179,7 @@ namespace PDSA2Coursework_Team1
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(238, 103);
+            this.label3.Location = new System.Drawing.Point(232, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 20);
@@ -185,7 +192,7 @@ namespace PDSA2Coursework_Team1
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(208, 103);
+            this.label4.Location = new System.Drawing.Point(202, 169);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 20);
@@ -198,7 +205,7 @@ namespace PDSA2Coursework_Team1
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(178, 103);
+            this.label5.Location = new System.Drawing.Point(172, 169);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(30, 20);
@@ -211,7 +218,7 @@ namespace PDSA2Coursework_Team1
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(148, 103);
+            this.label6.Location = new System.Drawing.Point(142, 169);
             this.label6.Margin = new System.Windows.Forms.Padding(0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(30, 20);
@@ -224,7 +231,7 @@ namespace PDSA2Coursework_Team1
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(328, 103);
+            this.label7.Location = new System.Drawing.Point(322, 169);
             this.label7.Margin = new System.Windows.Forms.Padding(0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(30, 20);
@@ -237,7 +244,7 @@ namespace PDSA2Coursework_Team1
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(298, 103);
+            this.label8.Location = new System.Drawing.Point(292, 169);
             this.label8.Margin = new System.Windows.Forms.Padding(0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 20);
@@ -250,7 +257,7 @@ namespace PDSA2Coursework_Team1
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(268, 103);
+            this.label9.Location = new System.Drawing.Point(262, 169);
             this.label9.Margin = new System.Windows.Forms.Padding(0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 20);
@@ -263,7 +270,7 @@ namespace PDSA2Coursework_Team1
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(418, 103);
+            this.label11.Location = new System.Drawing.Point(412, 169);
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(30, 20);
@@ -276,7 +283,7 @@ namespace PDSA2Coursework_Team1
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(388, 103);
+            this.label12.Location = new System.Drawing.Point(382, 169);
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(30, 20);
@@ -289,7 +296,7 @@ namespace PDSA2Coursework_Team1
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(358, 103);
+            this.label13.Location = new System.Drawing.Point(352, 169);
             this.label13.Margin = new System.Windows.Forms.Padding(0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(30, 20);
@@ -302,7 +309,7 @@ namespace PDSA2Coursework_Team1
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(508, 103);
+            this.label14.Location = new System.Drawing.Point(502, 169);
             this.label14.Margin = new System.Windows.Forms.Padding(0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(30, 20);
@@ -315,7 +322,7 @@ namespace PDSA2Coursework_Team1
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(478, 103);
+            this.label15.Location = new System.Drawing.Point(472, 169);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(30, 20);
@@ -328,7 +335,7 @@ namespace PDSA2Coursework_Team1
             this.label16.BackColor = System.Drawing.Color.Transparent;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(448, 103);
+            this.label16.Location = new System.Drawing.Point(442, 169);
             this.label16.Margin = new System.Windows.Forms.Padding(0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(30, 20);
@@ -341,7 +348,7 @@ namespace PDSA2Coursework_Team1
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(25, 516);
+            this.label10.Location = new System.Drawing.Point(19, 582);
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(30, 30);
@@ -354,7 +361,7 @@ namespace PDSA2Coursework_Team1
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(25, 546);
+            this.label17.Location = new System.Drawing.Point(19, 612);
             this.label17.Margin = new System.Windows.Forms.Padding(0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(30, 30);
@@ -367,7 +374,7 @@ namespace PDSA2Coursework_Team1
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.Control;
-            this.label18.Location = new System.Drawing.Point(25, 576);
+            this.label18.Location = new System.Drawing.Point(19, 642);
             this.label18.Margin = new System.Windows.Forms.Padding(0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(30, 30);
@@ -380,7 +387,7 @@ namespace PDSA2Coursework_Team1
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.SystemColors.Control;
-            this.label19.Location = new System.Drawing.Point(25, 486);
+            this.label19.Location = new System.Drawing.Point(19, 552);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(30, 30);
@@ -393,7 +400,7 @@ namespace PDSA2Coursework_Team1
             this.label20.BackColor = System.Drawing.Color.Transparent;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.SystemColors.Control;
-            this.label20.Location = new System.Drawing.Point(25, 456);
+            this.label20.Location = new System.Drawing.Point(19, 522);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(30, 30);
@@ -406,7 +413,7 @@ namespace PDSA2Coursework_Team1
             this.label21.BackColor = System.Drawing.Color.Transparent;
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.SystemColors.Control;
-            this.label21.Location = new System.Drawing.Point(25, 426);
+            this.label21.Location = new System.Drawing.Point(19, 492);
             this.label21.Margin = new System.Windows.Forms.Padding(0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(30, 30);
@@ -419,7 +426,7 @@ namespace PDSA2Coursework_Team1
             this.label22.BackColor = System.Drawing.Color.Transparent;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.Control;
-            this.label22.Location = new System.Drawing.Point(25, 336);
+            this.label22.Location = new System.Drawing.Point(19, 402);
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(30, 30);
@@ -432,7 +439,7 @@ namespace PDSA2Coursework_Team1
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.SystemColors.Control;
-            this.label23.Location = new System.Drawing.Point(25, 366);
+            this.label23.Location = new System.Drawing.Point(19, 432);
             this.label23.Margin = new System.Windows.Forms.Padding(0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(30, 30);
@@ -445,7 +452,7 @@ namespace PDSA2Coursework_Team1
             this.label24.BackColor = System.Drawing.Color.Transparent;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.ForeColor = System.Drawing.SystemColors.Control;
-            this.label24.Location = new System.Drawing.Point(25, 396);
+            this.label24.Location = new System.Drawing.Point(19, 462);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(30, 30);
@@ -458,7 +465,7 @@ namespace PDSA2Coursework_Team1
             this.label25.BackColor = System.Drawing.Color.Transparent;
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.ForeColor = System.Drawing.SystemColors.Control;
-            this.label25.Location = new System.Drawing.Point(25, 216);
+            this.label25.Location = new System.Drawing.Point(19, 282);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(30, 30);
@@ -471,7 +478,7 @@ namespace PDSA2Coursework_Team1
             this.label26.BackColor = System.Drawing.Color.Transparent;
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.SystemColors.Control;
-            this.label26.Location = new System.Drawing.Point(25, 246);
+            this.label26.Location = new System.Drawing.Point(19, 312);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(30, 30);
@@ -484,7 +491,7 @@ namespace PDSA2Coursework_Team1
             this.label27.BackColor = System.Drawing.Color.Transparent;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.Control;
-            this.label27.Location = new System.Drawing.Point(25, 276);
+            this.label27.Location = new System.Drawing.Point(19, 342);
             this.label27.Margin = new System.Windows.Forms.Padding(0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(30, 30);
@@ -497,7 +504,7 @@ namespace PDSA2Coursework_Team1
             this.label28.BackColor = System.Drawing.Color.Transparent;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.SystemColors.Control;
-            this.label28.Location = new System.Drawing.Point(25, 306);
+            this.label28.Location = new System.Drawing.Point(19, 372);
             this.label28.Margin = new System.Windows.Forms.Padding(0);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(30, 30);
@@ -510,7 +517,7 @@ namespace PDSA2Coursework_Team1
             this.label29.BackColor = System.Drawing.Color.Transparent;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.SystemColors.Control;
-            this.label29.Location = new System.Drawing.Point(25, 156);
+            this.label29.Location = new System.Drawing.Point(19, 222);
             this.label29.Margin = new System.Windows.Forms.Padding(0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(30, 30);
@@ -523,7 +530,7 @@ namespace PDSA2Coursework_Team1
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.SystemColors.Control;
-            this.label30.Location = new System.Drawing.Point(25, 186);
+            this.label30.Location = new System.Drawing.Point(19, 252);
             this.label30.Margin = new System.Windows.Forms.Padding(0);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(30, 30);
@@ -536,7 +543,7 @@ namespace PDSA2Coursework_Team1
             this.label31.BackColor = System.Drawing.Color.Transparent;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.ForeColor = System.Drawing.SystemColors.Control;
-            this.label31.Location = new System.Drawing.Point(25, 126);
+            this.label31.Location = new System.Drawing.Point(19, 192);
             this.label31.Margin = new System.Windows.Forms.Padding(0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(30, 30);
@@ -550,7 +557,7 @@ namespace PDSA2Coursework_Team1
             this.label32.BackColor = System.Drawing.Color.Transparent;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label32.Location = new System.Drawing.Point(15, 9);
+            this.label32.Location = new System.Drawing.Point(6, 72);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(78, 13);
             this.label32.TabIndex = 34;
@@ -558,7 +565,7 @@ namespace PDSA2Coursework_Team1
             // 
             // playersName
             // 
-            this.playersName.Location = new System.Drawing.Point(18, 29);
+            this.playersName.Location = new System.Drawing.Point(9, 92);
             this.playersName.Name = "playersName";
             this.playersName.Size = new System.Drawing.Size(283, 20);
             this.playersName.TabIndex = 35;
@@ -567,12 +574,11 @@ namespace PDSA2Coursework_Team1
             // 
             this.gamemenu.BackColor = System.Drawing.Color.Black;
             this.gamemenu.FlatAppearance.BorderSize = 0;
-            this.gamemenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.gamemenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gamemenu.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gamemenu.Location = new System.Drawing.Point(662, 19);
+            this.gamemenu.Location = new System.Drawing.Point(699, 12);
             this.gamemenu.Name = "gamemenu";
-            this.gamemenu.Size = new System.Drawing.Size(106, 23);
+            this.gamemenu.Size = new System.Drawing.Size(123, 40);
             this.gamemenu.TabIndex = 36;
             this.gamemenu.Text = "Game Menu";
             this.gamemenu.UseVisualStyleBackColor = false;
@@ -584,9 +590,9 @@ namespace PDSA2Coursework_Team1
             this.get_Maximum_Solution.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.get_Maximum_Solution.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.get_Maximum_Solution.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.get_Maximum_Solution.Location = new System.Drawing.Point(568, 306);
+            this.get_Maximum_Solution.Location = new System.Drawing.Point(542, 522);
             this.get_Maximum_Solution.Name = "get_Maximum_Solution";
-            this.get_Maximum_Solution.Size = new System.Drawing.Size(200, 42);
+            this.get_Maximum_Solution.Size = new System.Drawing.Size(171, 45);
             this.get_Maximum_Solution.TabIndex = 41;
             this.get_Maximum_Solution.Text = "Get Maximum Solutions";
             this.get_Maximum_Solution.UseVisualStyleBackColor = false;
@@ -597,9 +603,9 @@ namespace PDSA2Coursework_Team1
             this.t_time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.t_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.t_time.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.t_time.Location = new System.Drawing.Point(669, 399);
+            this.t_time.Location = new System.Drawing.Point(643, 615);
             this.t_time.Name = "t_time";
-            this.t_time.Size = new System.Drawing.Size(100, 20);
+            this.t_time.Size = new System.Drawing.Size(70, 20);
             this.t_time.TabIndex = 40;
             this.t_time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -609,9 +615,9 @@ namespace PDSA2Coursework_Team1
             this.s_time.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.s_time.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.s_time.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.s_time.Location = new System.Drawing.Point(669, 366);
+            this.s_time.Location = new System.Drawing.Point(643, 582);
             this.s_time.Name = "s_time";
-            this.s_time.Size = new System.Drawing.Size(100, 20);
+            this.s_time.Size = new System.Drawing.Size(70, 20);
             this.s_time.TabIndex = 39;
             this.s_time.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -621,7 +627,7 @@ namespace PDSA2Coursework_Team1
             this.lthreaded.BackColor = System.Drawing.Color.Transparent;
             this.lthreaded.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lthreaded.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lthreaded.Location = new System.Drawing.Point(565, 402);
+            this.lthreaded.Location = new System.Drawing.Point(539, 618);
             this.lthreaded.Name = "lthreaded";
             this.lthreaded.Size = new System.Drawing.Size(92, 13);
             this.lthreaded.TabIndex = 38;
@@ -633,11 +639,92 @@ namespace PDSA2Coursework_Team1
             this.lSequential.BackColor = System.Drawing.Color.Transparent;
             this.lSequential.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lSequential.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lSequential.Location = new System.Drawing.Point(565, 366);
+            this.lSequential.Location = new System.Drawing.Point(539, 582);
             this.lSequential.Name = "lSequential";
             this.lSequential.Size = new System.Drawing.Size(98, 13);
             this.lSequential.TabIndex = 37;
             this.lSequential.Text = "Sequential Time";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.BackColor = System.Drawing.Color.Transparent;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label33.Location = new System.Drawing.Point(12, 24);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(684, 17);
+            this.label33.TabIndex = 44;
+            this.label33.Text = "The 8 Queens Puzzle is over 170 years old, where you\'ll see that the 16 Queens Pu" +
+    "zzle has over 14 million\r\n";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.BackColor = System.Drawing.Color.Transparent;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label34.Location = new System.Drawing.Point(12, 41);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(270, 17);
+            this.label34.TabIndex = 45;
+            this.label34.Text = "possible answers (but can you find one?!)";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.BackColor = System.Drawing.Color.Transparent;
+            this.label36.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label36.Location = new System.Drawing.Point(539, 351);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(283, 13);
+            this.label36.TabIndex = 47;
+            this.label36.Text = "The objective is to place all 16 queens on the chessboard ";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label37.Location = new System.Drawing.Point(539, 364);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(259, 13);
+            this.label37.TabIndex = 48;
+            this.label37.Text = "without any queens being able to capture each other.";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.BackColor = System.Drawing.Color.Transparent;
+            this.label35.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label35.Location = new System.Drawing.Point(539, 407);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(272, 13);
+            this.label35.TabIndex = 49;
+            this.label35.Text = "Remember, a queen can capture another piece if it is on";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.BackColor = System.Drawing.Color.Transparent;
+            this.label38.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label38.Location = new System.Drawing.Point(537, 420);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(279, 13);
+            this.label38.TabIndex = 50;
+            this.label38.Text = " the same row, column, vertically, horizontally, or diagonal.";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.BackColor = System.Drawing.Color.Transparent;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label39.Location = new System.Drawing.Point(539, 321);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(148, 13);
+            this.label39.TabIndex = 51;
+            this.label39.Text = "INSTRUCTION TO PLAY";
             // 
             // SixteenQueen_Puzzle
             // 
@@ -645,8 +732,15 @@ namespace PDSA2Coursework_Team1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.BackgroundImage = global::PDSA2Coursework_Team1.Properties.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(784, 646);
+            this.BackgroundImage = global::PDSA2Coursework_Team1.Properties.Resources.bgimge;
+            this.ClientSize = new System.Drawing.Size(834, 697);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label35);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label34);
+            this.Controls.Add(this.label33);
             this.Controls.Add(this.get_Maximum_Solution);
             this.Controls.Add(this.t_time);
             this.Controls.Add(this.s_time);
@@ -740,6 +834,12 @@ namespace PDSA2Coursework_Team1
         private System.Windows.Forms.TextBox s_time;
         private System.Windows.Forms.Label lthreaded;
         private System.Windows.Forms.Label lSequential;
-
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
     }
 }

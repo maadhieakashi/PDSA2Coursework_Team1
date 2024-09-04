@@ -174,12 +174,13 @@
     <None Include="Resources\queen.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\bg.png" />
+    <None Include="Resources\bgimge.png" />
   </ItemGroup>
-
-		<PropertyGroup>
-			<LangVersion>preview</LangVersion>
-		</PropertyGroup>
-	
+  <ItemGroup>
+    <None Include="Resources\tip.png" />
+  </ItemGroup>
+  <PropertyGroup>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
