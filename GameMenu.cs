@@ -26,5 +26,12 @@ namespace PDSA2Coursework_Team1
               this.Hide();
             
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SixteenQueen_Puzzle SixtnQnsForm = new SixteenQueen_Puzzle();
+            SixtnQnsForm.Show();
+            this.Hide();
+        }
     }
 }
