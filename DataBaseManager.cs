@@ -12,7 +12,7 @@ namespace PDSA2Coursework_Team1
     public class DatabaseManager
     {
         // Define the connection string with the correct port number
-        private static string connectionString = "server=localhost;port=3307;database=coursework;uid=root;pwd=1234;";
+        private static string connectionString = "server=localhost;port=3307;database=pdsa2cw;uid=root;pwd=1234;";
         private MySqlConnection connection;
 
         public DatabaseManager()
@@ -37,7 +37,7 @@ namespace PDSA2Coursework_Team1
             }
         }
 
-        // Close connection to the database
+        // Close connection db
         public void CloseConnection()
         {
             try
@@ -50,14 +50,14 @@ namespace PDSA2Coursework_Team1
             catch (MySqlException ex)
             {
                 Console.WriteLine($"An error occurred while closing the connection: {ex.Message}");
-                // Handle exception as needed
+                
             }
         }
 
-        // Insert a solution into the database
+        // Insert correct response with playername to db
         public void InsertSolution(string solution, string playerName)
         {
-            string query = "INSERT INTO sixteen_queens_puzzle (Solution, PlayerName) VALUES (@solution, @playerName)";
+         string query = "INSERT INTO sixteen_queens_puzzle (Solution,PlayerName)VALUES(@solution, @playerName)";
 
             using (MySqlCommand cmd = new MySqlCommand(query, connection))
             {
@@ -71,7 +71,7 @@ namespace PDSA2Coursework_Team1
             }
         }
 
-        // Retrieve all solutions (optional)
+        // Retrieve all solutions
         public MySqlDataReader GetAllSolutions()
         {
             string query = "SELECT * FROM sixteen_queens_puzzle";

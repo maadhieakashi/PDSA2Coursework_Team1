@@ -27,7 +27,6 @@ namespace PDSA2Coursework_Team1
             InitializeComponent();
 
 
-            // queenImage = Image.FromFile(@"C:\Users\akash\source\repos\SixteenQnns\SixteenQns\Resources\queen.png");
             queenImage = Properties.Resources.queen;
             queens = new bool[BoardSize, BoardSize];
             submitClicked = false;
@@ -35,7 +34,7 @@ namespace PDSA2Coursework_Team1
             //database connection
             dbConnecter = new DatabaseManager();
 
-            // Attach event handler for the Get Maximum Solution button
+            
             get_Maximum_Solution.Click += Get_Maximum_Solution_Click;
         }
 
@@ -50,7 +49,7 @@ namespace PDSA2Coursework_Team1
         }
 
         // Clear the board by resetting the queens array
-        private void ClearBoard()
+        public void ClearBoard()
         {
             Array.Clear(queens, 0, queens.Length);
         }
@@ -77,7 +76,7 @@ namespace PDSA2Coursework_Team1
         }
 
         // Handle mouse clicks to place or remove queens
-        private void chessboardPanel_MouseClick(object sender, MouseEventArgs e)
+        public void chessboardPanel_MouseClick(object sender, MouseEventArgs e)
         {
             int column = e.X / SquareSize; // Calculate clicked column
             int row = e.Y / SquareSize;    // Calculate clicked row
@@ -94,25 +93,25 @@ namespace PDSA2Coursework_Team1
         }
 
         // Check if the clicked position is within the board limits
-        private bool IsWithinBoard(int column, int row)
+        public bool IsWithinBoard(int column, int row)
         {
             return column < BoardSize && row < BoardSize;
         }
 
         // Check if a queen can be placed at the clicked position
-        private bool CanPlaceQueen(int row, int column)
+        public bool CanPlaceQueen(int row, int column)
         {
             return CountQueens() < 16 || queens[row, column];
         }
 
         // Toggle the presence of a queen at a specific position
-        private void ToggleQueen(int row, int column)
+        public void ToggleQueen(int row, int column)
         {
             queens[row, column] = !queens[row, column];
         }
 
         // Update the position text box with the current queens' positions
-        private void UpdatePositionTextBox()
+        public void UpdatePositionTextBox()
         {
             var positions = new List<string>();
             for (int i = 0; i < BoardSize; i++)
@@ -158,6 +157,7 @@ namespace PDSA2Coursework_Team1
         // Handle the submission of a solution
         private void submitButton_Click(object sender, EventArgs e)
         {
+            
             if (submitClicked)
             {
                 MessageBox.Show("solution is correct. Try another!", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -180,14 +180,13 @@ namespace PDSA2Coursework_Team1
             string solution = positionTextBox.Text;
             string playerName = playersName.Text;
 
-            // Save solution to the database
             dbConnecter.InsertSolution(solution, playerName);
-
+            //solution has already been recognized that already in db
             MessageBox.Show("solution has already been recognized. Try another", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         // Count the number of queens currently on the board
-        private int CountQueens()
+        public int CountQueens()
         {
             int count = 0;
             for (int i = 0; i < BoardSize; i++)
@@ -204,7 +203,7 @@ namespace PDSA2Coursework_Team1
         }
 
         // Validate the solution by checking rows, columns, and diagonals
-        private bool IsValidSolution()
+        public bool IsValidSolution()
         {
             for (int i = 0; i < BoardSize; i++)
             {
@@ -225,7 +224,7 @@ namespace PDSA2Coursework_Team1
             for (int i = 0; i < BoardSize; i++)
             {
                 if (i != row && (queens[i, col] || (col - row + i >= 0 && col - row + i < BoardSize && queens[i, col - row + i]) ||
-                                 (col + row - i >= 0 && col + row - i < BoardSize && queens[i, col + row - i])))
+                         (col + row - i >= 0 && col + row - i < BoardSize && queens[i, col + row - i])))
                 {
                     return false;
                 }
@@ -233,54 +232,48 @@ namespace PDSA2Coursework_Team1
             return true;
         }
 
-        // Handle the click event to find maximum solutions using both sequential and threaded methods
+        // Handle the click event to find maximum solutions using sequential and threaded methods
 
-        private async void Get_Maximum_Solution_Click(object sender, EventArgs e)
+        public async void Get_Maximum_Solution_Click(object sender, EventArgs e)
         {
-            // Clear previous results
+            
             s_time.Text = "Calculating...";
             t_time.Text = "Calculating...";
-            int NumberOfSolutions = 50;
+            
             // Sequential Solution
             var sequentialStopwatch = Stopwatch.StartNew();
             var sequentialSolutions = FindSolutionsSequentially(NumberOfSolutions);
             sequentialStopwatch.Stop();
-            s_time.Text = sequentialStopwatch.Elapsed.TotalSeconds.ToString("F2");
-
-            // Save sequential solutions to database
-
+            s_time.Text = sequentialStopwatch.Elapsed.TotalMilliseconds.ToString("F2");
+            //db save
             await DatabaseManager.SaveSequentialSolutionsToDatabaseAsync(sequentialSolutions);
 
             // Threaded Solution
             var threadedStopwatch = Stopwatch.StartNew();
             var threadedSolutions = await FindSolutionsThreadedAsync(NumberOfSolutions);
             threadedStopwatch.Stop();
-            t_time.Text = threadedStopwatch.Elapsed.TotalSeconds.ToString("F2");
-
-            // Save threaded solutions to database
+            t_time.Text = threadedStopwatch.Elapsed.TotalMilliseconds.ToString("F2");
+            // db save
             await DatabaseManager.SaveThreadedSolutionsToDatabaseAsync(threadedSolutions);
         }
 
-        // Find solutions using a sequential algorithm
-        private List<List<int>> FindSolutionsSequentially(int numberOfSolutions)
+        // Find solutions by sequential algorithm
+        int NumberOfSolutions = 100;
+        public List<List<int>> FindSolutionsSequentially(int numberOfSolutions)
         {
             var solutions = new List<List<int>>();
             Solve(new int[BoardSize], 0, solutions, numberOfSolutions);
             return solutions;
         }
-
-        // Recursive backtracking algorithm to solve the puzzle
         private void Solve(int[] board, int row, List<List<int>> solutions, int maxSolutions)
         {
             if (solutions.Count >= maxSolutions)
                 return;
-
             if (row == BoardSize)
             {
                 solutions.Add(board.ToList());
                 return;
             }
-
             for (int col = 0; col < BoardSize; col++)
             {
                 if (IsSafe(board, row, col))
@@ -291,7 +284,7 @@ namespace PDSA2Coursework_Team1
                 }
             }
         }
-
+        
         // Overloaded IsSafe method for the algorithmic logic
         private bool IsSafe(int[] board, int row, int col)
         {
@@ -305,8 +298,8 @@ namespace PDSA2Coursework_Team1
             return true;
         }
 
-        // Find solutions using a threaded algorithm
-        private Task<List<List<int>>> FindSolutionsThreadedAsync(int numberOfSolutions)
+        // Find solutions by threaded algorithm
+        public Task<List<List<int>>> FindSolutionsThreadedAsync(int numberOfSolutions)
         {
             return Task.Run(() => FindSolutionsSequentially(numberOfSolutions));
         }
