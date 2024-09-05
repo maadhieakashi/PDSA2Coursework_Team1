@@ -38,10 +38,11 @@
             // PredictTheValueIndex
             // 
             this.PredictTheValueIndex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.PredictTheValueIndex.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PredictTheValueIndex.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PredictTheValueIndex.Location = new System.Drawing.Point(75, 552);
+            this.PredictTheValueIndex.Location = new System.Drawing.Point(456, 505);
             this.PredictTheValueIndex.Name = "PredictTheValueIndex";
-            this.PredictTheValueIndex.Size = new System.Drawing.Size(196, 47);
+            this.PredictTheValueIndex.Size = new System.Drawing.Size(211, 64);
             this.PredictTheValueIndex.TabIndex = 5;
             this.PredictTheValueIndex.Text = "Predict the Value Index";
             this.PredictTheValueIndex.UseVisualStyleBackColor = false;
@@ -50,10 +51,12 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Gray;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(463, 552);
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button4.Location = new System.Drawing.Point(68, 505);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(196, 47);
+            this.button4.Size = new System.Drawing.Size(211, 64);
             this.button4.TabIndex = 4;
             this.button4.Text = "Identify Shortest Path";
             this.button4.UseVisualStyleBackColor = false;
@@ -61,10 +64,11 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Salmon;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(463, 38);
+            this.button3.Location = new System.Drawing.Point(456, 116);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(196, 47);
+            this.button3.Size = new System.Drawing.Size(211, 64);
             this.button3.TabIndex = 3;
             this.button3.Text = "Minimum Cost";
             this.button3.UseVisualStyleBackColor = false;
@@ -72,10 +76,11 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(278, 417);
+            this.button2.Location = new System.Drawing.Point(264, 418);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(196, 47);
+            this.button2.Size = new System.Drawing.Size(211, 64);
             this.button2.TabIndex = 2;
             this.button2.Text = "Sixteen Queen Puzzle";
             this.button2.UseVisualStyleBackColor = false;
@@ -83,10 +88,11 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(75, 38);
+            this.button1.Location = new System.Drawing.Point(68, 115);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(196, 47);
+            this.button1.Size = new System.Drawing.Size(211, 64);
             this.button1.TabIndex = 1;
             this.button1.Text = "tower of Hanoi";
             this.button1.UseVisualStyleBackColor = false;
