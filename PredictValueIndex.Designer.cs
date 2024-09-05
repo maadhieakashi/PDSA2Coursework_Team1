@@ -185,9 +185,8 @@ namespace PDSA2Coursework_Team1
             this.lbSearchResult.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSearchResult.Location = new System.Drawing.Point(168, 299);
             this.lbSearchResult.Name = "lbSearchResult";
-            this.lbSearchResult.Size = new System.Drawing.Size(49, 13);
+            this.lbSearchResult.Size = new System.Drawing.Size(0, 13);
             this.lbSearchResult.TabIndex = 21;
-            this.lbSearchResult.Text = "find me ";
             // 
             // lblTargetNumber
             // 

@@ -24,14 +24,13 @@ namespace PDSA2Coursework_Team1
         private int selectedIndex;
         private int selectedNumber;
         private Dictionary<int, string> comboBoxItems = new Dictionary<int, string>();
-        private Stopwatch userStopwatch; // Stopwatch to track user time
+        private Stopwatch userStopwatch; // Stopwatch 
         public PredictValueIndex()
         {
             InitializeComponent();
             btnReset.Click += btnReset_Click;
             // Set the target number label's background color to transparent
-            lblTargetNumber.BackColor = Color.Transparent;
-            // Set the answer label's background color to transparent
+            lblTargetNumber.BackColor = Color.Transparent;            
             lblResult.BackColor = Color.Transparent;
         }
 
@@ -77,7 +76,7 @@ namespace PDSA2Coursework_Team1
             comboBoxItems.Clear();
             cmbChoices.Items.Clear();
 
-            // Ensure selectedIndex and selectedNumber are valid
+            // makesure Index and selectedNumber are valid
             if (numbers == null || numbers.Count == 0)
             {
                 MessageBox.Show("Number list is empty.");
@@ -135,44 +134,34 @@ namespace PDSA2Coursework_Team1
             stopwatch.Restart();
             var jumpSearchResult = SearchAlgorithms.JumpSearch(numbers, selectedNumber);
             stopwatch.Stop();
-            long jumpSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); // Convert to microseconds
+            long jumpSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); 
 
             // Measure time for Exponential Search
             stopwatch.Restart();
             var exponentialSearchResult = SearchAlgorithms.ExponentialSearch(numbers, selectedNumber);
             stopwatch.Stop();
-            long exponentialSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); // Convert to microseconds
+            long exponentialSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); 
 
             // Measure time for Fibonacci Search
             stopwatch.Restart();
             var fibonacciSearchResult = SearchAlgorithms.FibonacciSearch(numbers, selectedNumber);
             stopwatch.Stop();
-            long fibonacciSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); // Convert to microseconds
+            long fibonacciSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); 
 
             // Measure time for Interpolation Search
             stopwatch.Restart();
             var interpolationSearchResult = SearchAlgorithms.InterpolationSearch(numbers, selectedNumber);
             stopwatch.Stop();
-            long interpolationSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); // Convert to microseconds
+            long interpolationSearchTimeMicros = stopwatch.ElapsedTicks / (Stopwatch.Frequency / 1000000); 
 
-            // Save results to the database
-            //SaveResult(txtUserName.Text, "Binary Search", selectedNumber, binarySearchResult.index, binarySearchTimeMicros, binarySearchResult.index == selectedIndex);
-            // SaveResult(txtUserName.Text, "Jump Search", selectedNumber, jumpSearchResult.index, jumpSearchTimeMicros, jumpSearchResult.index == selectedIndex);
-            ////SaveResult(txtUserName.Text, "Exponential Search", selectedNumber, exponentialSearchResult.index, exponentialSearchTimeMicros, exponentialSearchResult.index == selectedIndex);
-            //SaveResult(txtUserName.Text, "Fibonacci Search", selectedNumber, fibonacciSearchResult.index, fibonacciSearchTimeMicros, fibonacciSearchResult.index == selectedIndex);
-            // SaveResult(txtUserName.Text, "Interpolation Search", selectedNumber, interpolationSearchResult.index, interpolationSearchTimeMicros, interpolationSearchResult.index == selectedIndex);
+            
             SaveResult("Binary Search", selectedNumber, binarySearchResult.index, binarySearchTimeMicros);
             SaveResult("Jump Search", selectedNumber, jumpSearchResult.index, jumpSearchTimeMicros);
             SaveResult("Exponential Search", selectedNumber, exponentialSearchResult.index, exponentialSearchTimeMicros);
             SaveResult("Fibonacci Search", selectedNumber, fibonacciSearchResult.index, fibonacciSearchTimeMicros);
             SaveResult("Interpolation Search", selectedNumber, interpolationSearchResult.index, interpolationSearchTimeMicros);
 
-            //Optionally, display algorithem search results in the label
-            // lblResult.Text = $"Binary Search - Index: {binarySearchResult.index}, Time: {binarySearchTimeMicros} µs\n" +
-            //  $"Jump Search - Index: {jumpSearchResult.index}, Time: {jumpSearchTimeMicros} µs\n" +
-            //  $"Exponential Search - Index: {exponentialSearchResult.index}, Time: {exponentialSearchTimeMicros} µs\n" +
-            // $"Fibonacci Search - Index: {fibonacciSearchResult.index}, Time: {fibonacciSearchTimeMicros} µs\n" +
-            // $"Interpolation Search - Index: {interpolationSearchResult.index}, Time: {interpolationSearchTimeMicros} µs";
+            
 
 
             //showing algorithem and the time
@@ -216,10 +205,9 @@ namespace PDSA2Coursework_Team1
                 ? $"Spot on! You got it right! The index is {selectedIndex}."
                 : $"Not quite right, give it another shot!";
 
-            // Save the search results regardless of correctness  //this is not
-            //SaveSearchResult(txtUserName.Text, "User's Choice", selectedNumber, userChoiceIndex, timeTakenMicros, isCorrect);
+          
 
-            // Save the user's prediction only if it's correct //this is working 
+            // Save the user's prediction only if it's correct 
             if (isCorrect)
             {
                 SaveUserPrediction(txtUserName.Text, isCorrect);
@@ -239,16 +227,16 @@ namespace PDSA2Coursework_Team1
                     connection.Open();
 
                     var command = new MySqlCommand(
-                        "INSERT INTO search_results (user_name, search_method, target_value, result_index, time_taken, is_correct, search_date) VALUES (@UserName, @SearchMethod, @TargetValue, @ResultIndex, @TimeTaken, @IsCorrect, @SearchDate)",
+                        "INSERT INTO search_results ( search_method, target_value, result_index, time_taken, search_date) VALUES ( @SearchMethod, @TargetValue, @ResultIndex, @TimeTaken, @SearchDate)",
                         connection
                     );
 
-                    command.Parameters.AddWithValue("@UserName", userName);
+                   
                     command.Parameters.AddWithValue("@SearchMethod", searchMethod);
                     command.Parameters.AddWithValue("@TargetValue", targetValue);
                     command.Parameters.AddWithValue("@ResultIndex", resultIndex);
                     command.Parameters.AddWithValue("@TimeTaken", timeTaken);
-                    command.Parameters.AddWithValue("@IsCorrect", isCorrect);
+                   
                     command.Parameters.AddWithValue("@SearchDate", DateTime.Now);
 
                     command.ExecuteNonQuery();
@@ -261,34 +249,7 @@ namespace PDSA2Coursework_Team1
         }
 
 
-        /* private void SaveResult(string userName, string searchMethod, int targetValue, int resultIndex, long timeTaken, bool isCorrect)
-         {
-             string connectionString = "Server=localhost;Database=search_game_db;User ID=root;Password=pavani;Connection Timeout=30;";
-
-             try
-             {
-                 using (var connection = new MySqlConnection(connectionString))
-                 {
-                     connection.Open();
-
-                     var command = new MySqlCommand("INSERT INTO search_results (user_name, search_method, target_value, result_index, time_taken, is_correct, search_date) VALUES (@UserName, @SearchMethod, @TargetValue, @ResultIndex, @TimeTaken, @IsCorrect, @SearchDate)", connection);
-
-                     command.Parameters.AddWithValue("@UserName", userName);
-                     command.Parameters.AddWithValue("@SearchMethod", searchMethod);
-                     command.Parameters.AddWithValue("@TargetValue", targetValue);
-                     command.Parameters.AddWithValue("@ResultIndex", resultIndex);
-                     command.Parameters.AddWithValue("@TimeTaken", timeTaken);
-                     command.Parameters.AddWithValue("@IsCorrect", isCorrect);
-                     command.Parameters.AddWithValue("@SearchDate", DateTime.Now);
-
-                     command.ExecuteNonQuery();
-                 }
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("An error occurred while saving results: " + ex.Message);
-             }
-         }*/
+       
 
         private void SaveResult(string searchMethod, int targetValue, int resultIndex, long timeTaken)
         {
@@ -300,7 +261,7 @@ namespace PDSA2Coursework_Team1
                 {
                     connection.Open();
 
-                    // Adjusted SQL command to exclude user_name and is_correct
+                    
                     var command = new MySqlCommand(
                         "INSERT INTO search_results (search_method, target_value, result_index, time_taken, search_date) VALUES (@SearchMethod, @TargetValue, @ResultIndex, @TimeTaken, @SearchDate)",
                         connection
@@ -359,17 +320,13 @@ namespace PDSA2Coursework_Team1
 
             // Clear the result label
             lblResult.Text = "";
-
-            //clear the searchAlgorithem results label
+                        
             lbSearchResult.Text = "";
-
-            // Clear the result label
+                        
             lblTargetNumber.Text = "";
-
-            // Clear the TextBox for the user's name
+                        
             txtUserName.Text = "";
-
-            // Clear the ComboBox items
+                        
             cmbChoices.Items.Clear();
 
             // Stop the user stopwatch if it's running
@@ -383,7 +340,7 @@ namespace PDSA2Coursework_Team1
             selectedIndex = -1;
             selectedNumber = -1;
 
-            // Optionally, re-enable the Start button if needed
+            //re-enable the Start button if needed
             btnStartGame.Enabled = true;
 
             // Clear the Dictionary storing ComboBox items
