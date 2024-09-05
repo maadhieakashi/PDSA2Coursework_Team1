@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.title = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SixteenQns = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -36,88 +35,93 @@
             this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // title
-            // 
-            this.title.AutoSize = true;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.title.Location = new System.Drawing.Point(52, 38);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(95, 29);
-            this.title.TabIndex = 0;
-            this.title.Text = "Games";
-            // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(88, 111);
+            this.button1.BackColor = System.Drawing.Color.Brown;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(27, 56);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(174, 23);
+            this.button1.Size = new System.Drawing.Size(142, 48);
             this.button1.TabIndex = 1;
             this.button1.Text = "Tower of Hanoi";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SixteenQns
             // 
-            this.SixteenQns.Location = new System.Drawing.Point(88, 156);
+            this.SixteenQns.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.SixteenQns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SixteenQns.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SixteenQns.Location = new System.Drawing.Point(280, 75);
             this.SixteenQns.Name = "SixteenQns";
-            this.SixteenQns.Size = new System.Drawing.Size(174, 23);
+            this.SixteenQns.Size = new System.Drawing.Size(142, 48);
             this.SixteenQns.TabIndex = 2;
             this.SixteenQns.Text = "Sixteen Queen Puzzle";
-            this.SixteenQns.UseVisualStyleBackColor = true;
+            this.SixteenQns.UseVisualStyleBackColor = false;
             this.SixteenQns.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(88, 202);
+            this.button3.BackColor = System.Drawing.Color.Aqua;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(12, 300);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 23);
+            this.button3.Size = new System.Drawing.Size(142, 48);
             this.button3.TabIndex = 3;
             this.button3.Text = "Minimum Cost";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(88, 251);
+            this.button4.BackColor = System.Drawing.Color.Yellow;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(297, 300);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(174, 23);
+            this.button4.Size = new System.Drawing.Size(142, 48);
             this.button4.TabIndex = 4;
             this.button4.Text = "Shortest Path";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(88, 301);
+            this.button5.BackColor = System.Drawing.Color.Lime;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(148, 377);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(174, 23);
+            this.button5.Size = new System.Drawing.Size(142, 48);
             this.button5.TabIndex = 5;
-            this.button5.Text = "Predict the Index";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "Predict the  Value Index";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click_1);
             // 
             // GameMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(510, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.BackgroundImage = global::PDSA2Coursework_Team1.Properties.Resources.main_background;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(451, 450);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.SixteenQns);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.title);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "GameMenu";
             this.Text = "Game Menu";
             this.Load += new System.EventHandler(this.GameMenu_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button SixteenQns;
         private System.Windows.Forms.Button button3;

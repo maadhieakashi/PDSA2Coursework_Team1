@@ -310,5 +310,10 @@ namespace PDSA2Coursework_Team1
             GameMenuForm.Show();
             this.Hide();
         }
+
+        private void SixteenQueen_Puzzle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

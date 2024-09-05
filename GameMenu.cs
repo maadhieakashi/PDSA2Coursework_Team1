@@ -34,28 +34,43 @@ namespace PDSA2Coursework_Team1
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            MinimumCost MinimumCostForm = new MinimumCost();
-            MinimumCostForm.Show();
-            this.Hide();
+            
 
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            ShortestPath ShortestPathForm = new ShortestPath();
-            ShortestPathForm.Show();
-            this.Hide();
+            
 
         }
         private void button5_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void GameMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
         {
             PredictValueIndex PredictValueIndexForm = new PredictValueIndex();
             PredictValueIndexForm.Show();
             this.Hide();
         }
 
-        private void GameMenu_Load(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
+            ShortestPath ShortestPathForm = new ShortestPath();
+            ShortestPathForm.Show();
+            this.Hide();
+        }
 
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            MinimumCost MinimumCostForm = new MinimumCost();
+            MinimumCostForm.Show();
+            this.Hide();
         }
     }
 }

@@ -788,6 +788,7 @@ namespace PDSA2Coursework_Team1
             this.Controls.Add(this.RestartButton);
             this.Name = "SixteenQueen_Puzzle";
             this.Text = "Sixteen Queens Puzzle";
+            this.Load += new System.EventHandler(this.SixteenQueen_Puzzle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
