@@ -29,7 +29,6 @@ namespace PDSA2Coursework_Team1
             this.label1 = new System.Windows.Forms.Label();
             this.cmbChoices = new System.Windows.Forms.ComboBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.lblResult = new System.Windows.Forms.Label();
             this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.predictTheValueIndexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -37,13 +36,13 @@ namespace PDSA2Coursework_Team1
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblTargetNumber = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lbSearchResult = new System.Windows.Forms.Label();
+            this.lblTargetNumber = new System.Windows.Forms.Label();
+            this.lblResult = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +62,7 @@ namespace PDSA2Coursework_Team1
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(224, 462);
+            this.txtUserName.Location = new System.Drawing.Point(224, 467);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(135, 20);
             this.txtUserName.TabIndex = 1;
@@ -74,7 +73,7 @@ namespace PDSA2Coursework_Team1
             this.label1.BackColor = System.Drawing.Color.PaleGreen;
             this.label1.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(81, 462);
+            this.label1.Location = new System.Drawing.Point(81, 467);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 18);
             this.label1.TabIndex = 2;
@@ -83,7 +82,7 @@ namespace PDSA2Coursework_Team1
             // cmbChoices
             // 
             this.cmbChoices.FormattingEnabled = true;
-            this.cmbChoices.Location = new System.Drawing.Point(223, 491);
+            this.cmbChoices.Location = new System.Drawing.Point(223, 496);
             this.cmbChoices.Name = "cmbChoices";
             this.cmbChoices.Size = new System.Drawing.Size(136, 21);
             this.cmbChoices.TabIndex = 4;
@@ -101,15 +100,6 @@ namespace PDSA2Coursework_Team1
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
-            // 
-            // lblResult
-            // 
-            this.lblResult.AutoSize = true;
-            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult.Location = new System.Drawing.Point(131, 546);
-            this.lblResult.Name = "lblResult";
-            this.lblResult.Size = new System.Drawing.Size(0, 16);
-            this.lblResult.TabIndex = 6;
             // 
             // gameToolStripMenuItem
             // 
@@ -165,7 +155,7 @@ namespace PDSA2Coursework_Team1
             this.label3.BackColor = System.Drawing.Color.PaleGreen;
             this.label3.Font = new System.Drawing.Font("Algerian", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(79, 494);
+            this.label3.Location = new System.Drawing.Point(79, 499);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(136, 18);
             this.label3.TabIndex = 14;
@@ -180,25 +170,6 @@ namespace PDSA2Coursework_Team1
             this.pictureBox1.TabIndex = 15;
             this.pictureBox1.TabStop = false;
             // 
-            // lblTargetNumber
-            // 
-            this.lblTargetNumber.AutoSize = true;
-            this.lblTargetNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.lblTargetNumber.Font = new System.Drawing.Font("Book Antiqua", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetNumber.Location = new System.Drawing.Point(83, 424);
-            this.lblTargetNumber.Name = "lblTargetNumber";
-            this.lblTargetNumber.Size = new System.Drawing.Size(0, 21);
-            this.lblTargetNumber.TabIndex = 16;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.pictureBox3.Location = new System.Drawing.Point(71, 451);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(298, 71);
-            this.pictureBox3.TabIndex = 17;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
@@ -208,14 +179,47 @@ namespace PDSA2Coursework_Team1
             this.pictureBox4.TabIndex = 18;
             this.pictureBox4.TabStop = false;
             // 
+            // lbSearchResult
+            // 
+            this.lbSearchResult.AutoSize = true;
+            this.lbSearchResult.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSearchResult.Location = new System.Drawing.Point(168, 299);
+            this.lbSearchResult.Name = "lbSearchResult";
+            this.lbSearchResult.Size = new System.Drawing.Size(49, 13);
+            this.lbSearchResult.TabIndex = 21;
+            this.lbSearchResult.Text = "find me ";
+            // 
+            // lblTargetNumber
+            // 
+            this.lblTargetNumber.AutoSize = true;
+            this.lblTargetNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblTargetNumber.Font = new System.Drawing.Font("Book Antiqua", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTargetNumber.ForeColor = System.Drawing.Color.White;
+            this.lblTargetNumber.Location = new System.Drawing.Point(77, 422);
+            this.lblTargetNumber.Name = "lblTargetNumber";
+            this.lblTargetNumber.Size = new System.Drawing.Size(0, 26);
+            this.lblTargetNumber.TabIndex = 20;
+            // 
+            // lblResult
+            // 
+            this.lblResult.AutoSize = true;
+            this.lblResult.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblResult.Location = new System.Drawing.Point(131, 546);
+            this.lblResult.Name = "lblResult";
+            this.lblResult.Size = new System.Drawing.Size(0, 16);
+            this.lblResult.TabIndex = 6;
+            // 
             // PredictValueIndex
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BackgroundImage = global::PDSA2Coursework_Team1.Properties.Resources.predictindexbackground;
+            this.BackgroundImage = global::PDSA2Coursework_Team1.Properties.Resources.final_background;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(734, 611);
+            this.Controls.Add(this.lbSearchResult);
+            this.Controls.Add(this.lblTargetNumber);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.btnSubmit);
@@ -224,8 +228,6 @@ namespace PDSA2Coursework_Team1
             this.Controls.Add(this.cmbChoices);
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.lblTargetNumber);
             this.Controls.Add(this.lblResult);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menuStrip1);
@@ -238,7 +240,6 @@ namespace PDSA2Coursework_Team1
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -252,7 +253,6 @@ namespace PDSA2Coursework_Team1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbChoices;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Label lblResult;
         private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem predictTheValueIndexToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
@@ -260,8 +260,9 @@ namespace PDSA2Coursework_Team1
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblTargetNumber;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4; PictureBox pictureBox5;
+        private Label lbSearchResult;
+        private Label lblTargetNumber;
+        private Label lblResult;
     }
 }

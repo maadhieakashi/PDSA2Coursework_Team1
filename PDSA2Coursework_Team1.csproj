@@ -174,5 +174,20 @@
   <ItemGroup>
     <None Include="Resources\predictindexbackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OOAD630.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logic Arena.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\main background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PredictTheValueIndex.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

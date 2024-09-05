@@ -10,6 +10,12 @@ namespace PDSA2Coursework_Team1
 {
     public class SearchAlgorithms
     {
+        private static long GetElapsedMicroseconds(Stopwatch stopwatch)
+        {
+            return stopwatch.ElapsedTicks * 1_000_000 / Stopwatch.Frequency;
+
+        }
+
         public static (int index, long time) BinarySearch(List<int> list, int value)
         {
             var stopwatch = Stopwatch.StartNew();
@@ -31,7 +37,7 @@ namespace PDSA2Coursework_Team1
             }
 
             stopwatch.Stop();
-            return (result, stopwatch.ElapsedMilliseconds);
+            return (result, GetElapsedMicroseconds(stopwatch));
         }
 
         public static (int index, long time) JumpSearch(List<int> list, int value)
@@ -46,46 +52,32 @@ namespace PDSA2Coursework_Team1
                 prev = step;
                 step += (int)Math.Sqrt(length);
                 if (prev >= length)
-                    return (-1, stopwatch.ElapsedMilliseconds);
+                    return (-1, GetElapsedMicroseconds(stopwatch));
             }
 
             while (list[prev] < value)
             {
                 prev++;
                 if (prev == Math.Min(step, length))
-                    return (-1, stopwatch.ElapsedMilliseconds);
+                    return (-1, GetElapsedMicroseconds(stopwatch));
             }
 
             if (list[prev] == value)
             {
                 stopwatch.Stop();
-                return (prev, stopwatch.ElapsedMilliseconds);
+                return (prev, GetElapsedMicroseconds(stopwatch));
             }
 
             stopwatch.Stop();
-            return (-1, stopwatch.ElapsedMilliseconds);
+            return (-1, GetElapsedMicroseconds(stopwatch));
         }
 
-        ////public static (int index, long time) ExponentialSearch(List<int> list, int value)
-        // {
-        // var stopwatch = Stopwatch.StartNew();
-        // int length = list.Count;
-        // if (list[0] == value) return (0, stopwatch.ElapsedMilliseconds);
 
-        //int index = 1;
-        // while (index < length && list[index] <= value)
-        //   index *= 2;
-
-        // int low = index / 2;
-        // int high = Math.Min(index, length - 1);
-
-        // return BinarySearch(list.GetRange(low, high - low + 1), value);
-        // }
         public static (int index, long time) ExponentialSearch(List<int> list, int value)
         {
             var stopwatch = Stopwatch.StartNew();
             int length = list.Count;
-            if (list[0] == value) return (0, stopwatch.ElapsedMilliseconds);
+            if (list[0] == value) return (0, GetElapsedMicroseconds(stopwatch));
 
             int index = 1;
             while (index < length && list[index] <= value)
@@ -100,13 +92,14 @@ namespace PDSA2Coursework_Team1
             stopwatch.Stop();
 
             if (subIndex != -1)
-                return (subIndex + low, stopwatch.ElapsedMilliseconds);  // Corrected index
+                return (subIndex + low, GetElapsedMicroseconds(stopwatch));  // Corrected index
             else
-                return (-1, stopwatch.ElapsedMilliseconds);  // Not found
+                return (-1, GetElapsedMicroseconds(stopwatch));  // Not found
         }
 
         public static (int index, long time) FibonacciSearch(List<int> list, int value)
         {
+
             var stopwatch = Stopwatch.StartNew();
             int length = list.Count;
             int fibM2 = 0;
@@ -121,9 +114,11 @@ namespace PDSA2Coursework_Team1
             }
 
             int offset = -1;
+
             while (fibM > 1)
             {
                 int i = Math.Min(offset + fibM2, length - 1);
+
                 if (list[i] < value)
                 {
                     fibM = fibM1;
@@ -134,24 +129,24 @@ namespace PDSA2Coursework_Team1
                 else if (list[i] > value)
                 {
                     fibM = fibM2;
-                    fibM1 -= fibM2;
+                    fibM1 = fibM1 - fibM2;
                     fibM2 = fibM - fibM1;
                 }
                 else
                 {
                     stopwatch.Stop();
-                    return (i, stopwatch.ElapsedMilliseconds);
+                    return (i, GetElapsedMicroseconds(stopwatch));
                 }
             }
 
             if (fibM1 == 1 && list[offset + 1] == value)
             {
                 stopwatch.Stop();
-                return (offset + 1, stopwatch.ElapsedMilliseconds);
+                return (offset + 1, GetElapsedMicroseconds(stopwatch));
             }
 
             stopwatch.Stop();
-            return (-1, stopwatch.ElapsedMilliseconds);
+            return (-1, GetElapsedMicroseconds(stopwatch));
         }
 
         public static (int index, long time) InterpolationSearch(List<int> list, int value)
@@ -164,8 +159,8 @@ namespace PDSA2Coursework_Team1
                 if (low == high)
                 {
                     if (list[low] == value)
-                        return (low, stopwatch.ElapsedMilliseconds);
-                    return (-1, stopwatch.ElapsedMilliseconds);
+                        return (low, GetElapsedMicroseconds(stopwatch));
+                    return (-1, GetElapsedMicroseconds(stopwatch));
                 }
 
                 int pos = low + (((high - low) / (list[high] - list[low])) * (value - list[low]));
@@ -173,7 +168,7 @@ namespace PDSA2Coursework_Team1
                 if (list[pos] == value)
                 {
                     stopwatch.Stop();
-                    return (pos, stopwatch.ElapsedMilliseconds);
+                    return (pos, GetElapsedMicroseconds(stopwatch));
                 }
 
                 if (list[pos] < value)
@@ -183,7 +178,7 @@ namespace PDSA2Coursework_Team1
             }
 
             stopwatch.Stop();
-            return (-1, stopwatch.ElapsedMilliseconds);
+            return (-1, GetElapsedMicroseconds(stopwatch));
         }
     }
 }
